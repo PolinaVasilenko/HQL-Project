@@ -15,6 +15,6 @@
     <property name="hibernate.highlight_sql">true</property>
     <property name="show_sql">true</property>
     <mapping class="com.hibernate.entity.User"/>
-    
+
   </session-factory>
 </hibernate-configuration>
