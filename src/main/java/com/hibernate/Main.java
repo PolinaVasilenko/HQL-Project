@@ -17,8 +17,10 @@ public class Main {
 
         Session session = HibernateUtil.getSessionFactory().openSession();
 
-        Query query = session.createQuery("from User u where u.id = :text");
-        query.setParameter("text", 10025L);
+        Query query = session.createQuery("from User");
+        query.setFirstResult(1);
+        query.setMaxResults(10);
+
 
         List<User> users = query.getResultList();
         log.info(users.size());
